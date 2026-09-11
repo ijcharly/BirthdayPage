@@ -18,7 +18,10 @@
       --card: #eacb37;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
     body {
       margin: 0;
       background: var(--bg);
@@ -28,10 +31,13 @@
     }
     section {
       min-height: 100vh;
+      min-height: 100svh;
       padding: 9vh 8vw;
       display: flex;
       align-items: center;
       justify-content: center;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
     }
     .inner { width: min(1050px, 100%); }
     .eyebrow {
@@ -49,7 +55,7 @@
     }
     h1 { font-size: clamp(4rem, 12vw, 9.5rem); max-width: 900px; }
     h2 { font-size: clamp(2.8rem, 6vw, 5.5rem); }
-    p {
+    a,p {
       font-size: clamp(1rem, 1.5vw, 1.2rem);
       line-height: 1.75;
       max-width: 650px;
@@ -205,6 +211,10 @@
         Hope i can give you a real hug soon guapo, but for now a virtual hug it is ♡.
       </p>
       <div class="signature">Happy Birthday Scotty.</div>
+      <div><a href="https://www.amazon.com/gc/n/AD5Y4Q7LMSZZJRZ7BWUE2JRQEP5Q?t=SvL&asin=B07KPKP9Y8" target="_blank">
+        Since you couldn't get your free coffe before (Click Me)
+      </a> </div>
+      
     </div>
   </section>
 
