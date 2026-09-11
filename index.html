@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Guapo ♡</title>
+  <meta name="description" content="A little birthday website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #360747c0;      /* #360747*/
+      --text: #eacb37;      /*#eacb37*/
+      --muted: #bc970c;     /*#bc970c*/
+      --line: #bc970c;
+      --accent: #bc970c;
+      --card: #eacb37;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      font-weight: 400;
+    }
+    section {
+      min-height: 100vh;
+      padding: 9vh 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .inner { width: min(1050px, 100%); }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .72rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    h1, h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      line-height: .98;
+      margin: 0;
+    }
+    h1 { font-size: clamp(4rem, 12vw, 9.5rem); max-width: 900px; }
+    h2 { font-size: clamp(2.8rem, 6vw, 5.5rem); }
+    p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      line-height: 1.75;
+      max-width: 650px;
+      color: #eacc379b;
+    }
+    .hero { position: relative; }
+    .hero-note {
+      position: absolute;
+      right: 8vw;
+      bottom: 10vh;
+      color: var(--accent);
+      font-size: 2rem;
+      transform: rotate(-5deg);
+      font-family: "Playfair Display", serif;
+    }
+    .scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 8vw;
+      font-size: .75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 7vw, 8rem);
+      align-items: center;
+    }
+    .photo {
+      aspect-ratio: 4 / 5;
+      background: var(--card);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      overflow: hidden;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo span { padding: 2rem; text-align: center; }
+    .quote {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 3rem 0;
+      margin-top: 3rem;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      line-height: 1.25;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .gallery .photo:first-child { aspect-ratio: 5 / 4; }
+    .gallery .photo:last-child { aspect-ratio: 4 / 5; }
+    .closing { text-align: center; }
+    .closing .inner { display: flex; flex-direction: column; align-items: center; }
+    .closing p { margin-left: auto; margin-right: auto; }
+    .signature {
+      margin-top: 2.5rem;
+      color: var(--accent);
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+    }
+    nav {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 10;
+      display: flex;
+      gap: .4rem;
+      padding: .4rem;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(221,217,209,.8);
+      border-radius: 999px;
+    }
+    nav a {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #c9c4ba;
+      display: block;
+    }
+    nav a.active { background: var(--text); }
+    @media (max-width: 700px) {
+      section { padding: 8vh 7vw; }
+      .split, .gallery { grid-template-columns: 1fr; }
+      .hero-note { right: 7vw; bottom: 12vh; }
+      nav { right: 1rem; top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Page sections">
+    <a href="#home" aria-label="Home"></a>
+    <a href="#message" aria-label="Message"></a>
+    <a href="#memories" aria-label="Memories"></a>
+    <a href="#wish" aria-label="Birthday wish"></a>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="inner">
+      <div class="eyebrow">September 7th was a couple days ago but</div>
+      <h1>Happy<br>Birthday<br>Guapo.♡</h1>
+      <div class="hero-note"> One last dance with your 20s </div>
+      <div class="scroll">↓ keep scrolling</div>
+    </div>
+  </section>
+
+  <section id="message">
+    <div class="inner split">
+      <div class="photo">
+        <img src="img/monkey.jpeg" alt="A favorite photo of Scotty">
+        <span>Drop a favorite photo </span>
+      </div>
+      <div>
+        <div class="eyebrow">I know you said you didnt want anything but...</div>
+        <h2>Wanted to <br>give you something.</h2>
+        <p>
+          I unfortunately have no idea what's your adress to send you something so my options
+          were limited, was thinking long and hard about how can i surprise you  so i decided
+          that a website was a good idea since i know how to do it and I also think it fits the 
+          format of our interactions lol.
+        </p>
+        <div class="quote">I'm sorry for missing your special day :(</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="memories">
+    <div class="inner">
+      <h2>Hope to have so many more<br>facetimes with you and tiny.</h2>
+      <div class="gallery">
+        <div class="photo">
+          <img src="img/scotty.jpeg" alt="Memory">
+          <span>Photo #2</span>
+        </div>
+        <div class="photo">
+          <img src="img/tiny.jpeg" alt="Memory">
+          <span>Photo #3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wish" class="closing">
+    <div class="inner">
+      <div class="eyebrow">and for the year ahead with you:</div>
+      <h2>I hope for more laughs.<br>More movies.<br>And more you.</h2>
+      <p>
+        Whatever this year has in store for you, I wish you all the best and hope you are abble to get all 
+        your dreams, aspirations and goals.<br>
+        Hope i can give you a real hug soon guapo, but for now a virtual hug it is ♡.
+      </p>
+      <div class="signature">Happy Birthday Scotty.</div>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const dots = document.querySelectorAll("nav a");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          dots.forEach(dot => dot.classList.remove("active"));
+          const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add("active");
+        }
+      });
+    }, { threshold: 0.55 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
